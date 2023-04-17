@@ -1,0 +1,87 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SG Framework",
+	"patterns": [
+		{
+			"include": "#keyword",
+			"name": "keyword.other"
+		},
+		{
+			"include": "#strings",
+			"name": "string"
+		},
+		{
+			"include": "#control",
+			"name": "keyword.control"
+		},
+		{
+			"include": "#operator",
+			"name": "keyword.operator"
+		},
+		{
+			"include": "#integer",
+			"name": "constant.numeric"
+		},
+		{
+			"include": "#float",
+			"name": "constant.numeric"
+		},
+		{
+			"include": "#comment",
+			"name":"comment.line.double-slash"
+		}
+	],
+	"repository": {
+		"keyword": {
+			"patterns": [{
+				"name": "keyword.sgframework",
+				"match": "\\b(accuracy|algorithm|all|append|assign|call|close|comment|const|coordinates|damping|diagonal|divisions|edge|equ|file|fill|func|gausselim|ilu|infinity|iterations|known|label|length|linear|linsol|logarithmic|main|maximum|minimum|newton|no|none|not|open|over|pcg|point|preconditioner|read|real|rectangles|refine|region|set|signedlog|solve|sor|sort|unknown|var|write|xor|yes|zero)\\b"
+				
+			}]
+		},
+		"float":{
+			"patterns": [{
+				"name": "constant.numeric.float",
+				"match": "\\b(\\+|-)?[0-9]+(.[0-9]+)?((E|e)?(\\+|-)?[0-9]+)?\\b"
+			}]
+		},
+		"integer":{
+			"patterns": [{
+				"name": "constant.numeric.int",
+				"match": "\\b(\\+|-)?[0-9]+\\b"
+			}]
+		},
+		"control":{
+			"patterns": [{
+				"name": "keyword.control.sgframework",
+				"match": "\\b(do|else|exit|goto|if|return|while)\\b"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "operators.control.sgframework",
+				"match": "\\b(\\+|-|not|\\*|/|>|<|<=|>=|==|<>|and|or|xor)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.sgframework",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.sgframework",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			
+			"patterns": [{
+					"name": "comment.line.double-slash",
+					"match": "//[^\n\r]+?(?:\\*\\)|[\n\r])"
+				}
+			]
+		}
+	},
+	"scopeName": "source.sg"
+}
