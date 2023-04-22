@@ -5,7 +5,7 @@
   "author": {"name": "Jonas Bodingbauer", "email": "e11802486@student.tuwien.ac.at"},
   "repository": {"type": "git",
                   "url": "https://github.com/Caesiumhydroxid/VSCode-SGFramework-SyntaxHighlighting"},
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "caesiumhydroxid",
   "engines": {
     "vscode": "^1.0.0"
