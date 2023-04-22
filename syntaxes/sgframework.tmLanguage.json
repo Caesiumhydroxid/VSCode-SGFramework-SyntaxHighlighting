@@ -29,13 +29,22 @@
 		{
 			"include": "#comment",
 			"name":"comment.line.double-slash"
+		},
+		{
+			"include": "#function",
+			"name":"entity.name.function"
+		},
+		{
+			"include": "#meshfunction",
+			"name":"entity.name.function"
 		}
 	],
 	"repository": {
+
 		"keyword": {
 			"patterns": [{
 				"name": "keyword.sgframework",
-				"match": "\\b(accuracy|algorithm|all|append|assign|call|close|comment|const|coordinates|damping|diagonal|divisions|edge|equ|file|fill|func|gausselim|ilu|infinity|iterations|known|label|length|linear|linsol|logarithmic|main|maximum|minimum|newton|no|none|not|open|over|pcg|point|preconditioner|read|real|rectangles|refine|region|set|signedlog|solve|sor|sort|unknown|var|write|xor|yes|zero)\\b"
+				"match": "\\b(accuracy|algorithm|all|append|assign|call|close|comment|const|coordinates|damping|diagonal|divisions|edge|equ|file|fill|func|gausselim|ilu|infinity|iterations|known|label|length|linear|linsol|logarithmic|main|maximum|minimum|newton|no|none|not|open|over|pcg|point|preconditioner|read|real|rectangles|refine|region|set|signedlog|solve|sor|sort|unknown|var|write|yes|zero)\\b"
 				
 			}]
 		},
@@ -81,6 +90,18 @@
 					"match": "//[^\n\r]+?(?:\\*\\)|[\n\r])"
 				}
 			]
+		},
+		"function": {
+			"patterns": [{
+				"name": "entity.name.function.sgframework",
+				"match": "\\b(abs|arccos|arccosh|arccot|arccoth|arccsc|arccsch|arcsec|arcsech|arcsin|arcsinh|arctan|arctanh|aux1|aux2|bern|ave|csc|csch|cos|cosh|cot|coth|erf|exp|inv|ln|log|max|min|ngdep|nonneg|nsdep|pow|pow10|sec|sech|sign|sin|sinh|sq|sqrt|step|tan|tanh)\\b"	
+			}]
+		},
+		"meshfunction": {
+			"patterns": [{
+				"name": "entity.name.meshfunction.sgframework",
+				"match": "\\b(elen|ilen|area|lsum|nsum)\\b"	
+			}]
 		}
 	},
 	"scopeName": "source.sg"
