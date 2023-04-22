@@ -1,11 +1,12 @@
 {
   "name": "sgframework-highlighter",
-  "displayName": "SGFramework highlighter",
+  "displayName": "SGFramework Syntax-highlighter",
   "description": "Syntax Highlighter for SGFramework",
   "author": {"name": "Jonas Bodingbauer", "email": "e11802486@student.tuwien.ac.at"},
-  "repository": {"type": "none"},
-  "version": "0.0.1",
-  "publisher": "Jonas",
+  "repository": {"type": "git",
+                  "url": "https://github.com/Caesiumhydroxid/VSCode-SGFramework-SyntaxHighlighting"},
+  "version": "0.0.2",
+  "publisher": "caesiumhydroxid",
   "engines": {
     "vscode": "^1.0.0"
   },
@@ -16,7 +17,7 @@
     "languages": [{
       "id": "sgframework",
       "aliases": ["SG Framework", "sgframework"],
-      "extensions": [".sg"],
+      "extensions": [".sg", ".sk"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
